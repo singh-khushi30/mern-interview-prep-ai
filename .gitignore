@@ -1,0 +1,13 @@
+#Logs
+logs
+*.logs
+
+#Node modules
+frontend/interview-prep-ai/node_modules/
+backend/node_modules/
+
+#Environment variables
+frontend/interview-prep-ai/.env
+backend/.env
+
+.DS_Store
