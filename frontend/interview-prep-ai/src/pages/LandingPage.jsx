@@ -148,7 +148,7 @@ const LandingPage = () => {
         </div>
 
         <div className="text-sm bg-gray-50 text-secondary text-center p-5 mt-5">
-          Made with ❤️... Happy Coding
+          Made with ❤️... 
         </div>
       </div>
 
