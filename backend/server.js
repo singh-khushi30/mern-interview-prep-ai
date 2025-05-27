@@ -13,11 +13,21 @@ const { generateInterviewQuestions, generateConceptExplanation } = require("./co
 const app = express();
 
 dotenv.config();
+const allowedOrigins = [
+  'https://mern-interview-prep-ai-lood.vercel.app',
+  'http://localhost:5175'
+];
+
 app.use(cors({
-  origin: process.env.FRONTEND_URL,
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   credentials: true
 }));
-
 connectDB()
 
 // Middleware
